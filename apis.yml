@@ -1,23 +1,62 @@
 aid: athletigen
+
 name: Athletigen
-description: 'Athletigen is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://img1.wsimg.com/isteam/videos/uA41GmyyG8IMaxXdb
+
+description: 'Athletigen is a health‑focused biotechnology company that provides personalized genetic and biomarker insights to help individuals optimize nutrition, fitness, and wellness. Their platform leverages DNA testing and advanced analytics to deliver actionable recommendations for diet, exercise, and lifestyle. The company aims to empower users with data‑driven guidance for better health outcomes.'
+
 url: https://raw.githubusercontent.com/api-evangelist/athletigen/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Health
+- Biotechnology
+- Genetics
+- Wellness
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/athletigen-hosts.yml
+- type: DomainSecurity
+  url: security/athletigen-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/athletigen
+  url: https://athletigen.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: "No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found on api.athletigen.com or athletigen.com."
+  evidence:
+    - url: https://api.athletigen.com/openapi.json
+      status: 000
+    - url: https://api.athletigen.com/openapi.yaml
+      status: 000
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
